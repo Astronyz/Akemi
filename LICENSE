@@ -1,0 +1,163 @@
+Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+   This License applies to any work or other work whose author
+   has received a notification (which may be in the form of a
+   license or any other written declaration) from the Licensor
+   indicating that the work is licensed under this License.
+
+   Definitions.
+
+   "License" shall mean the terms and conditions for use, reproduction,
+   and distribution as defined by Sections 1 through 9 of this document.
+
+   "Licensor" shall mean the copyright owner or entity authorized by
+   the copyright owner that is granting the License.
+
+   "Legal Entity" shall mean the union of the acting entity and all
+   other entities that control, are controlled by, or are under common
+   control with that acting entity. For the purposes of this definition,
+   "control" means (i) the power, direct or indirect, to cause the
+   direction or management of such entity, whether by contract or
+   otherwise, or (ii) ownership of fifty percent (50%) or more of the
+   outstanding shares, or (iii) beneficial ownership of such entity.
+
+   "You" (or "Your") shall mean an individual or Legal Entity
+   exercising permissions granted by this License.
+
+   "Source" form shall mean the preferred form for making modifications,
+   including but not limited to software source code, documentation
+   source, and configuration files.
+
+   "Object" form shall mean any form resulting from mechanical
+   transformation or translation of a Source form, including but
+   not limited to compiled object code, generated extensions,
+   and intermediate representations.
+
+   "Work" shall mean the licensable work, which may consist of one or
+   more related components, and may be either a tangible or intangible
+   entity.
+
+   "Derivative Works" shall mean any work, whether in Source or Object
+   form, that is based on (or derived from) the Work and for which the
+   editorial revisions, annotations, elaborations, or other modifications
+   represent, as a whole, an original work of authorship. For the purposes
+   of this License, Derivative Works shall not include any work that
+   consists solely of:
+   (a) the Work itself, and
+   (b) identical copies of the Work.
+
+   "Contribution" shall mean any work, including the original version
+   of any work that is submitted for inclusion in the Work by the
+   copyright holder or author of the Work.
+
+   "Contributor" shall mean Licensor and any individual or Legal Entity
+   on behalf of whom a Contribution has been received by the Licensor
+   and subsequently incorporated within the Work.
+
+   2. Grant of Copyright License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to Those who
+      receive this License a perpetual, worldwide, non-exclusive,
+      no-charge, royalty-free, copyright license to reproduce, prepare
+      Derivative Works of, publicly display, publicly perform, sublicense,
+      and distribute the Work and such Derivative Works in Source or
+      Object form.
+
+   3. Grant of Patent License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to Those who
+      receive this License a perpetual, worldwide, non-exclusive,
+      no-charge, royalty-free, patent license to make, have made, use,
+      offer to sell, sell, import, and otherwise transfer the Work,
+      where such license applies only to those patent claims licensable
+      by such Contributor that are necessarily infringed by the
+      Use of the Work alone, or the Work with Derivative Works thereof.
+
+   4. Redistribution. You may reproduce and distribute copies of the
+      Work or Derivative Works thereof in Source or Object form,
+      provided that the following conditions are met:
+      (a) You must give appropriate credit to the original author(s) of
+         the Work, and provide a reasonable means for identifying
+         any Derivative Works made by others;
+      (b) You must cause any modified form of the Work to
+         prominently display the Apache License notice in
+         the positions within Derivative Works where such notices
+         would normally appear in the Work;
+      (c) You must not alter the text of Sections 2, 3, or 4 of
+         this License in any way; and
+      (d) You must not redistribute any form of the Work by any
+         means (electronic or otherwise) to any individual or
+         Legal Entity that asserts thirty (30) days or more of
+         exclusivity with respect to the Work or any Derivative Works
+         thereof.
+
+   5. Submission of Contributions. Unless You explicitly state otherwise,
+      any Contribution submitted for inclusion in the Work by
+      the author shall be:
+      (a) received in writing by the Licensor;
+      (b) deemed, under the Copyright Notice section of this License,
+         to have been received by the Licensor in the preceding
+         year, if any; and
+      (c) modified by the License in accordance with the procedure
+         described in the section titled "Contributor Revised
+         Copyright Notice".
+
+   6. Trademarks. This License does not grant permission to use the trade
+      names, trademarks, service marks, or product names of the Licensor
+      and its affiliates, except as required to maintain
+      reasonable detail for the purpose of identifying the
+      Licensor or Licensor Affiliates.
+
+   7. Disclaimer of Warranty. Unless required by applicable law, the
+      Work is provided "as is", without warranty of any kind, either
+      express or implied, including, but not limited to, the warranties
+      of merchantability, fitness for a particular purpose, and
+      non-infringement. In no event shall the Licensor be liable to
+      You for any direct, indirect, special, incidental, or consequential
+      damages of any kind, or with respect to the Work or any
+      Derivative Works thereof, even if the Licensor has been advised
+      of the possibility of such damage.
+
+   8. Limitation of Liability. In no event shall any Contributor
+      or the Licensor be liable for any amount in excess of
+      the aggregate sum of such Contributor's negligence,
+      the Licensor's negligence, and strict liability of
+      non-infringement, which may result in personal injury
+      or death. In no event shall the Licensor be liable for
+      any amount in excess of the aggregate sum of such
+      Contributor's negligence, the Licensor's negligence,
+      and strict liability of non-infringement, which may
+      result in personal injury or death.
+
+   9. Accepting Warranty or Additional Indemnity. Accepting a
+      warranty or additional indemnity from the Licensor does
+      not affect any of the rights granted under this License.
+
+   END OF TERMS AND CONDITIONS
+
+   APPENDIX: How to apply the Apache License to your work.
+
+      To apply the Apache License to your work, attach the following
+      boilerplate notice, with the fields enclosed by brackets "[]"
+      replaced with your own identifying information. (Don't include
+      the brackets!)  The text should be enclosed in the appropriate
+      comment syntax for the file format. We also recommend that a
+      file or class name and description of operation be included on
+      the same "printed page" as the copyright notice to facilitate
+      easier identification in third-party archives.
+
+   Copyright [yyyy] [name of copyright owner]
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
