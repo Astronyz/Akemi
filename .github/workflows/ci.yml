@@ -1,0 +1,95 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+        cache: 'pip'
+
+    - name: Install system dependencies
+      run: |
+        # Install Tesseract OCR
+        choco install tesseract --version=5.3.1 -y
+        # Refresh PATH
+        refreshenv
+
+    - name: Install Python dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Verify imports
+      run: |
+        python -c "
+        import akemi.akemi.audio.capture
+        import akemi.akemi.audio.vad
+        import akemi.akemi.audio.ring_buffer
+        import akemi.akemi.core.config
+        import akemi.akemi.core.logging_setup
+        import akemi.akemi.core.pause
+        import akemi.akemi.core.orchestrator
+        import akemi.akemi.storage.db
+        import akemi.akemi.storage.models
+        import akemi.akemi.brain.providers.base
+        import akemi.akemi.brain.providers.anthropic_provider
+        import akemi.akemi.brain.providers.openai_provider
+        import akemi.akemi.brain.providers.ollama_provider
+        import akemi.akemi.brain.providers.llamacpp_provider
+        import akemi.akemi.brain.triggers
+        import akemi.akemi.brain.self_improve
+        import akemi.akemi.stt.transcriber
+        import akemi.akemi.tts.base
+        import akemi.akemi.tts.piper_engine
+        import akemi.akemi.tts.cloud_engine
+        import akemi.akemi.vision.screenshot
+        import akemi.akemi.vision.ocr
+        import akemi.akemi.vision.frame_diff
+        import akemi.akemi.net.control_api
+        import akemi.akemi.net.hermes_client
+        print('All imports OK')
+        "
+
+    - name: Run syntax check
+      run: |
+        python -m py_compile akemi/akemi/**/*.py scripts/*.py
+
+    - name: Run tests
+      run: |
+        pytest -v --tb=short
+
+    - name: Check formatting (optional)
+      run: |
+        pip install ruff
+        ruff check . --select=E,F,W,I
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Install ruff
+      run: pip install ruff
+
+    - name: Run ruff
+      run: ruff check . --select=E,F,W,I,UP,B,C4
+
+    - name: Check formatting
+      run: ruff format --check .

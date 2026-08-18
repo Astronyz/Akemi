@@ -1,0 +1,94 @@
+# Akemi Triggers Configuration
+# Triggers define proactive behaviors based on events
+
+triggers:
+  - id: speech_detected
+    name: "Speech Detected"
+    description: "User started speaking - process with brain"
+    enabled: true
+    cooldown_seconds: 2
+    priority: 10
+    condition:
+      type: "audio_speech_detected"
+      min_speech_duration_ms: 500
+    action:
+      type: "run_brain"
+      prompt_template: "O usuário disse: {transcript}\nResponda de forma natural e concisa."
+
+  - id: silence_timeout
+    name: "Silence Timeout"
+    description: "Extended silence after speech - gentle check-in"
+    enabled: true
+    cooldown_seconds: 60
+    priority: 5
+    condition:
+      type: "audio_silence_timeout"
+      silence_timeout_ms: 30000
+    action:
+      type: "speak"
+      text: "Precisa de algo mais?"
+
+  - id: screen_change
+    name: "Screen Change Detected"
+    description: "Significant visual change on screen"
+    enabled: true
+    cooldown_seconds: 10
+    max_firings_per_hour: 20
+    priority: 7
+    condition:
+      type: "vision_change_detected"
+      min_change_score: 0.15
+    action:
+      type: "run_brain"
+      prompt_template: "Detectei uma mudança na tela. OCR: {ocr_text}\nComente se relevante."
+
+  - id: text_on_screen
+    name: "Text Detected on Screen"
+    description: "OCR found specific keywords"
+    enabled: true
+    cooldown_seconds: 30
+    priority: 8
+    condition:
+      type: "vision_text_detected"
+      ocr_keywords: ["erro", "error", "falha", "falhou", "atenção", "warning", "crítico", "critical"]
+    action:
+      type: "run_brain"
+      prompt_template: "Texto importante detectado na tela: {ocr_text}\nAnalise e avise se precisar de ação."
+
+  - id: periodic_checkin
+    name: "Periodic Check-in"
+    description: "Proactive check-in every hour"
+    enabled: true
+    cooldown_seconds: 3600
+    priority: 3
+    condition:
+      type: "time_interval"
+      interval_seconds: 3600
+    action:
+      type: "speak"
+      text: "Tudo bem por aí? Precisa de ajuda com algo?"
+
+  - id: error_occurred
+    name: "Error Occurred"
+    description: "System error detected"
+    enabled: true
+    cooldown_seconds: 60
+    priority: 9
+    condition:
+      type: "error_occurred"
+    action:
+      type: "run_brain"
+      prompt_template: "Ocorreu um erro: {error_message}\nExplique o que aconteceu e sugira solução."
+
+  - id: user_idle_long
+    name: "User Idle Long"
+    description: "User has been idle for a long time"
+    enabled: true
+    cooldown_seconds: 1800
+    priority: 2
+    condition:
+      type: "user_idle"
+      idle_timeout_seconds: 1800
+    action:
+      type: "speak"
+      text: "Você está aí? Posso ajudar em algo?"

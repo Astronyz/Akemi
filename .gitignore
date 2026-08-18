@@ -1,0 +1,72 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# Virtual environments
+venv/
+env/
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Data
+data/
+*.db
+*.db-*
+
+# Cache
+.cache/
+.cache/
+
+# Hermes/agent specific
+.state/
+.local/
+.skills/
+.hermes_history
+.install_method
+auth.json
+auth.lock
+config.yaml
+config.yaml.bak*
+processes.json
+state.db*
+kanban.db*
+gateway.lock
+gateway.pid
+gateway_state.json
+discord_threads.json
+channel_directory.json
+sessions/
+models_dev_cache.json
+ollama_cloud_models_cache.json
+provider_models_cache.json
+cron/
+
+# Binaries
+bin/
+
+# Akemi original repo (if exists as subdir)
+Akemi/
+
+# Skills (bundled)
+skills/
+
+# Soul
+SOUL.md
