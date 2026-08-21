@@ -7,7 +7,7 @@ Thank you for considering contributing to Akemi! Please read this document to un
 1. Fork the repository
 2. Create a new branch for your feature or bugfix
 3. Make your changes
-4. Ensure your code passes the tests
+4. Install with `pip install -e ".[dev]"` and run `pytest`
 5. Submit a pull request
 
 ## Code Style

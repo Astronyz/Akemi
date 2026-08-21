@@ -1,0 +1,5 @@
+# Placeholder for proactive trigger rules.
+# Example (not loaded yet):
+# - id: media_playing
+#   when: audio.speech
+#   action: maybe_comment
